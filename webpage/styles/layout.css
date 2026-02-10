@@ -24,6 +24,11 @@ body
   border-color: white gray black lightgray;
 }
 
+#pageTitle 
+{
+  display: block;
+}
+
 /* Navigation styles */
 #navbar
 {
