@@ -50,13 +50,13 @@ header > h1
 /* Link styles */
 a
 {
-  color: navy;
+  color: blue;
   text-decoration: none;
 }
 
 a:hover
 {
-  color: blue;
+  color: maroon;
   text-decoration: underline;
   border-color: inherit;
 }
