@@ -3,9 +3,7 @@ let playText = document.getElementById("nowplaying");
 let bgmButton = document.getElementById("bgmSwitch");
 
 music.loop = true;
-bgmButton.addEventListener("click", (event) => {
-  music.play();
-});
+getPlayButton(bgmButton);
 
 music.addEventListener("playing", (event) => {
   let playStatus = "<strong><span>Now Playing:</strong> Quad - Another Worlds (qd-anoth.xm)</span>";
