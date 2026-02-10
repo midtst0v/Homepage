@@ -11,7 +11,7 @@ header > h1
 #pageTitle 
 {
   color: whitesmoke;
-  text-shadow: #000000de 2px 2px;
+  text-shadow: #000d 2px 2px 3px;
 
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-variant: small-caps;
