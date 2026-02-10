@@ -1,11 +1,21 @@
-body
+body 
 {
+  background-color: cornflowerblue;
   font-family: Verdana, sans-serif;
 }
 
-header > h1
+#logo 
 {
-  text-align: center;
+  background-image: linear-gradient(black, gray);
+  border: 1px inset;
+  border-color: black gray white lightgray;
+}
+
+#banner 
+{
+  background-image: linear-gradient(darkgray, gray);
+  border: 1px outset;
+  border-color: white gray black lightgray;
 }
 
 #pageTitle 
@@ -16,6 +26,14 @@ header > h1
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-variant: small-caps;
   font-size: 18pt;
+}
+
+/* Navigation styles */
+#navbar
+{
+  background-color: whitesmoke;
+  border: 1px inset;
+  border-color: black gray white lightgray;
 }
 
 /* Link styles */
@@ -35,7 +53,6 @@ a:hover
 #navbar li > a,
 #navbar li > a:visited
 {
-  display: block;
   color: black;
   border-bottom: 1px dotted;
   border-color: gray;

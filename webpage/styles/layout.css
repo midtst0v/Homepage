@@ -2,15 +2,11 @@ body
 {
   width: 1024px;
   margin: auto;
-  background-color: cornflowerblue;
 }
 
 #logo 
 {
   margin: 2px;
-  background-image: linear-gradient(black, gray);
-  border: 1px inset;
-  border-color: black gray white lightgray;
 }
 
 #banner 
@@ -18,10 +14,6 @@ body
   display: grid;
   grid-template-columns: auto 1fr;
   margin: auto;
-
-  background-image: linear-gradient(darkgray, gray);
-  border: 1px outset;
-  border-color: white gray black lightgray;
 }
 
 #pageTitle 
@@ -35,8 +27,10 @@ body
   padding: 0;
   margin: 2px;
   list-style-type: none;
+}
 
-  background-color: whitesmoke;
-  border: 1px inset;
-  border-color: black gray white lightgray;
+#navbar li > a,
+#navbar li > a:visited
+{
+  display: block;
 }
