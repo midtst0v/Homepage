@@ -4,12 +4,12 @@ body
   width: 1024px;
 }
 
-h1 
+header > h1
 {
   text-align: center;
 }
 
-#images 
+header > #images 
 {
   text-align: center;
   display: block;
