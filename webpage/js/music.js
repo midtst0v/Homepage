@@ -5,5 +5,10 @@ document.addEventListener("click", (event) => {
 });
 
 music.addEventListener("playing", (event) => {
-  document.getElementById("nowplaying").innerHTML += "<strong><span>Now Playing:</strong> Quad - Another Worlds (qd-anoth.xm)</span>";
+  let playText = document.getElementById("nowplaying");
+  let playStatus = "<strong><span>Now Playing:</strong> Quad - Another Worlds (qd-anoth.xm)</span>";
+  if (playText.innerHTML != playStatus) // the text on the page gets cached :p
+  {
+    playText.innerHTML += playStatus;
+  }
 });
