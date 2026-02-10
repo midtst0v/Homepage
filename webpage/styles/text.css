@@ -2,3 +2,47 @@ body
 {
   font-family: Verdana, sans-serif;
 }
+
+header > h1
+{
+  text-align: center;
+}
+
+#pageTitle 
+{
+  color: whitesmoke;
+  text-shadow: #000000de 2px 2px;
+
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-variant: small-caps;
+  font-size: 18pt;
+}
+
+/* Link styles */
+a
+{
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: maroon;
+  text-decoration: underline;
+  border-color: inherit;
+}
+
+#navbar li > a,
+#navbar li > a:visited
+{
+  display: block;
+  color: black;
+  border-bottom: 1px dotted;
+  border-color: gray;
+}
+
+#navbar li > a:hover
+{
+  color: palegoldenrod;
+  background-image: linear-gradient(90deg, navy, whitesmoke);
+}
