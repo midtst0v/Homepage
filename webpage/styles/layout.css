@@ -34,3 +34,15 @@ body
 {
   display: block;
 }
+
+#webring
+{
+  display: block;
+  text-align: center;
+}
+
+#webring > a 
+{
+  padding: 0;
+  display: inline-block;
+}
