@@ -1,6 +1,6 @@
 async function populate()
 {
-  const jsonPath = "../assets/json/webring.json";
+  const jsonPath = "https://mdtx.cc/assets/json/webring.json";
 
   const request = new Request(jsonPath);
   const response = await fetch(request);
