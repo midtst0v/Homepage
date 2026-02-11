@@ -2,7 +2,7 @@
   "webring": 
   [
     {
-      "alt" : "mdtx.cc",
+      "alt" : "mdtx",
       "url" : "https://mdtx.cc",
       "img" : "https://mdtx.cc/assets/img/88x31.png"
     },
@@ -10,6 +10,11 @@
       "alt" : "bodacious44",
       "url" : "https://bodacious44.net",
       "img" : "https://bodacious44.net/pics/8831/newbutton.gif"
+    },
+    {
+      "alt" : "jnmono",
+      "url" : "https://jnmono.neocities.org",
+      "img" : "https://jnmono.neocities.org/webring.png"
     }
   ]
 }
