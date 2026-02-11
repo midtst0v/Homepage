@@ -44,5 +44,6 @@ body
 #webring > a 
 {
   padding: 0;
+  margin: 2px;
   display: inline-block;
 }

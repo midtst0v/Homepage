@@ -1,25 +1,17 @@
 async function populate()
 {
-  const jsonPath = "https://mdtx.cc/assets/json/webring.json";
-
-  const request = new Request(jsonPath);
+  const jsonUrl = "https://mdtx.cc/assets/json/webring.json";
+  const request = new Request(jsonUrl);
   const response = await fetch(request);
-  try
-  {
-    let webRing = await response.json();
-    if (!webRing) throw "Could not fetch JSON: " + jsonPath;
-    populateWebring(webRing);
-  }
-  catch(error)
-  {
-    console.log(error);
-  }
+  const webRing = await response.json();
+  //const webRing = `{ "webring": [ {"alt" : "bodacious44", "url" : "https://bodacious44.net", "img" : "https://bodacious44.net/pics/8831/newbutton.gif"}, {"alt" : "mdtx.cc", "url" : "https://mdtx.cc", "img" : "https://mdtx.cc/assets/img/88x31.png"} ] }`;
+  populateWebring(webRing);
 }
 
 function populateWebring(webring)
 {
-  const ring = document.getElementById("webring");
-  for (const btn of webring)
+  let ring = document.getElementById("webring");
+  for (const btn of webring.webring)
   {
     const link = document.createElement("a");
     const img = document.createElement("img");
@@ -29,8 +21,8 @@ function populateWebring(webring)
     link.href = btn.url;
 
     link.appendChild(img);
-    ring.appendChild(link);
+    ring.append(link);
   }
 }
 
-document.addEventListener("load", populate);
+window.addEventListener("load", populate);
