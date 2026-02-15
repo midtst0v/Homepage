@@ -1,34 +1,37 @@
 let music = new Audio("assets/audio/qd-anoth.mp3");
-let playText = document.getElementById("nowplaying");
+music.loop = true;
+
+let statusContainer = document.getElementById("nowplaying");
+let statusSpan = document.getElementById("playStatus");
 let bgmButton = document.getElementById("bgmSwitch");
 
-music.loop = true;
-getPlayButton(bgmButton);
+window.addEventListener("load", setPaused);
 
-music.addEventListener("playing", (event) => {
-  let playStatus = "<strong><span>Now Playing:</strong> Quad - Another Worlds (qd-anoth.xm)</span>";
-  playText.innerHTML = playStatus;
-
-  let bgmButton = document.getElementById("bgmSwitch");
-  bgmButton.innerHTML = "Pause BGM";
-  getPauseButton(bgmButton);
-});
-
-music.addEventListener("pause", (event) => {
-  bgmButton.innerHTML = "Play BGM";
-  getPlayButton(bgmButton);
-});
-
-function getPlayButton(bgmButton)
+function setPlaying(artist, title)
 {
-  bgmButton.addEventListener("click", (event) => {
-    music.play();
-  });
+  setPauseButton(bgmButton);
+  statusSpan.innerHTML = "<strong>Now Playing: </strong>" + artist + " - " + title;
+  music.play();
 }
 
-function getPauseButton(bgmButton)
+function setPaused()
 {
-  bgmButton.addEventListener("click", (event) => {
-    music.pause();
-  });
+  setPlayButton(bgmButton);
+  statusSpan.textContent = "";
+  music.pause();
+}
+
+
+function setPlayButton(bgmButton)
+{
+  bgmButton.textContent = "Play BGM";
+  bgmButton.onclick = function (){
+    setPlaying("Quad", "Another Worlds");
+  }
+}
+
+function setPauseButton(bgmButton)
+{
+  bgmButton.textContent = "Pause BGM";
+  bgmButton.onclick = setPaused;
 }
