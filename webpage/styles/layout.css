@@ -11,8 +11,7 @@ body
 
 #banner 
 {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: block;
   margin: auto;
 }
 
@@ -24,6 +23,8 @@ body
 /* Navigation styles */
 #navbar
 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 0;
   margin: 2px;
   list-style-type: none;
@@ -33,6 +34,8 @@ body
 #navbar li > a:visited
 {
   display: block;
+  text-align: center;
+  padding: 2px 0;
 }
 
 #webring
