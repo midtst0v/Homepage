@@ -7,19 +7,18 @@ async function populate()
     const request = new Request(jsonUrl);
     const response = await fetch(request);
     const webRing = await response.json();
-
     populateWebring(webRing);
   }
   catch(error)
   {
-    console.log("Web ring: Couldn't fetch JSON!");
+    console.log("Webring: couldn't fetch JSON!");
   }
 }
 
 function populateWebring(webring)
 {
   let ring = document.getElementById("webring");
-  for (const btn of webring.webring)
+  for (let btn of webring.webring)
   {
     const link = document.createElement("a");
     const img = document.createElement("img");
@@ -33,4 +32,4 @@ function populateWebring(webring)
   }
 }
 
-window.addEventListener("load", populate);
+populate();

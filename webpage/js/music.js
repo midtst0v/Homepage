@@ -1,11 +1,9 @@
-let music = new Audio("assets/audio/qd-anoth.mp3");
-music.loop = true;
+let music = document.getElementById("music");
+music.pause();
 
 let statusContainer = document.getElementById("nowplaying");
 let statusSpan = document.getElementById("playStatus");
 let bgmButton = document.getElementById("bgmSwitch");
-
-window.addEventListener("load", setPaused);
 
 function setPlaying(artist, title)
 {
@@ -21,17 +19,21 @@ function setPaused()
   music.pause();
 }
 
-
 function setPlayButton(bgmButton)
 {
+  bgmButton.removeEventListener("click", setPaused);
   bgmButton.textContent = "Play BGM";
-  bgmButton.onclick = function (){
+  bgmButton.onclick = function()
+  {
     setPlaying("Quad", "Another Worlds");
   }
 }
 
 function setPauseButton(bgmButton)
 {
+  bgmButton.removeEventListener("click", setPlaying);
   bgmButton.textContent = "Pause BGM";
   bgmButton.onclick = setPaused;
 }
+
+setPlayButton(bgmButton);
