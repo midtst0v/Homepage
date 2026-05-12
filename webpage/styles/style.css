@@ -1,6 +1,8 @@
 body 
 {
-  background-color: cornflowerblue;
+  color: white;
+  background-color: black;
+  /* background-color: cornflowerblue; */
   font-family: Verdana, sans-serif;
   font-size: 10pt;
 }
@@ -19,14 +21,14 @@ body
   border-color: white gray black lightgray;
 }
 
-#pageTitle 
+#pageTitle > p
 {
   color: whitesmoke;
-  text-shadow: black 2px 2px;
+  text-shadow: gray 2px 2px;
   margin: auto 4px;
 
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 18pt;
+  font-size: 24pt;
 }
 
 /* Navigation styles */

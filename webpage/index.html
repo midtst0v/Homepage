@@ -7,36 +7,46 @@
     <link rel="icon" href="assets/img/favicon.ico">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="js/music.js" defer></script>
     <script src="js/webring.js" defer></script>
   </head>
 
   <body>
-    <div id="banner">
-      <nav>
-        <span id="pageTitle">MDTX.cc [UNDER CONSTRUCTION]</span>
-        <ul id="navbar">
-          <li><a href="https://github.com/midtst0v">GitHub</a></li>
-          <li><a href="https://www.tumblr.com/midtst0v">Tumblr</a></li>
-          <li><a href="javascript:void(0);">Gallery [Coming Soon]</a></li>
-          <li><a href="xmpp:midtst0v@yax.im?roster">Chat on XMPP</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div id="nowplaying">
-      <audio src="assets/audio/qd-anoth.mp3" type="audio/mp3" id="music" loop></audio>
-      <a href="javascript:void(0);" id="bgmSwitch">Play BGM</a>
-      <span id="playStatus"></span>
-    </div>
-
-    <article id="content">
-      <h1>Welcome</h1>
-      <p>
-        I'm middi. I'm rather busy for the time being but I'm giving hosting on Cloudflare a whirl. For now, this place is mostly barren.
-      </p>
+    <article style="display: flex; flex-direction: column; align-items: center;">
+      <span id="pageTitle">
+        <p>MDTX.cc [UNDER CONSTRUCTION]</p>
+        <form method="get" style="display: flex; flex-direction: row; align-items: flex-start;">
+          <input type="checkbox" name="bgmPlaying" id="musicToggle">
+          <label for="musicToggle">Music</label>
+        </form>
+      </span>
+      <img src="assets/img/raycat_flip.gif" style="margin: 64px;">
     </article>
-
+    
+    <audio src="https://jetta.vgmtreasurechest.com/soundtracks/kirby-s-kira-kira-kids-1998-snes/ajtrbjqb/34%20Ending%20~%20Credits.mp3" type="audio/mp3" id="music" loop></audio>
+    
     <div id="webring">
     </div>
+
+    <script>
+      let music = document.getElementById("music");
+      let musicToggle = document.getElementById("musicToggle");
+
+      let bgmLabel = document.getElementsByTagName("label")[0];
+      let bgmLabelDefaultText = bgmLabel.textContent;
+
+      musicToggle.onchange = function(e) 
+      {
+        if(this.checked)
+        {
+          music.play();
+          bgmLabel.innerHTML = "<strong>PLAYING:</strong> Kirby's Star Stacker - Ending Credits";
+        }
+        else
+        {
+          music.pause();
+          bgmLabel.textContent = bgmLabelDefaultText;
+        }
+      };
+    </script>
   </body>
 </html>
