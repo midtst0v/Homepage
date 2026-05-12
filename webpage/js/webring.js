@@ -1,18 +1,17 @@
-async function populate()
+function populate()
 {
   const jsonUrl = "https://mdtx.cc/assets/json/webring.json";
-  
-  try 
+  const request = new Request(jsonUrl);
+
+  fetch(request)
+  .then((response) => 
   {
-    const request = new Request(jsonUrl);
-    const response = await fetch(request);
-    const webRing = await response.json();
-    populateWebring(webRing);
-  }
-  catch(error)
-  {
-    console.log("Webring: couldn't fetch JSON!");
-  }
+    if(!response.ok)
+      throw new Error(`Webring: couldn't fetch JSON! (${response.status})`);
+
+    return response.json();
+  })
+  .then((response) => populateWebring(response));
 }
 
 function populateWebring(webring)
