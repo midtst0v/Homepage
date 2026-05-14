@@ -11,20 +11,38 @@
   </head>
 
   <body>
-    <article style="display: flex; flex-direction: column; align-items: center;">
-      <span id="pageTitle">
-        <p>MDTX.cc [UNDER CONSTRUCTION]</p>
-        <form method="get" style="display: flex; flex-direction: row; align-items: flex-start;">
-          <input type="checkbox" name="bgmPlaying" id="musicToggle">
-          <label for="musicToggle">Music</label>
-        </form>
-      </span>
-      <img src="assets/img/raycat_flip.gif" style="margin: 64px;">
-    </article>
+    <div class="header">
+      <span class="pageTitle">MDTX.cc [UNDER CONSTRUCTION]</span>
+      <form method="get" class="musicCtl">
+        <input type="checkbox" name="bgmPlaying" id="musicToggle">
+        <label for="musicToggle">Music</label>
+        <audio src="https://jetta.vgmtreasurechest.com/soundtracks/kirby-s-kira-kira-kids-1998-snes/ajtrbjqb/34%20Ending%20~%20Credits.mp3" type="audio/mp3" id="music" loop></audio>
+      </form>
+    </div>
+
+    <div class="navarea">
+      <ul class="navbox">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <article>
+        <heading>
+          <span class="pageTitle">Home</span>
+        </heading>
+
+        <p>nothing captivating yet</p>
+        <img src="assets/img/raycat_flip.gif" alt="test">
+      </article>
+    </div>
     
-    <audio src="https://jetta.vgmtreasurechest.com/soundtracks/kirby-s-kira-kira-kids-1998-snes/ajtrbjqb/34%20Ending%20~%20Credits.mp3" type="audio/mp3" id="music" loop></audio>
-    
-    <div id="webring">
+    <div class="footer">
+      <div id="webring">
+      </div>
+      <span class="copyright">midtst0v &copy; 2026</span>
     </div>
 
     <script>

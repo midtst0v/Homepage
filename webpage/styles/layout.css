@@ -1,4 +1,4 @@
-@media screen and (max-width >= 1024px) {
+@media screen and (width >= 1024px) {
   body 
   {
     width: 1024px;
@@ -6,23 +6,65 @@
   }
 }
 
-#logo 
+body 
 {
-  margin: 2px;
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "navarea content"
+    "footer footer";
+  grid-template-columns: 1fr 4fr;
 }
 
-#banner 
+.header, .navarea, .content, .footer
 {
-  display: block;
-  margin: auto;
+  padding: 3px;
+  margin: 3px;
 }
 
-#pageTitle 
+.header
+{
+  grid-area: header;
+}
+
+.pageTitle
 {
   display: block;
+}
+
+.content 
+{
+  grid-area: content;
+}
+
+.navarea
+{
+  grid-area: navarea;
+}
+
+.navbox 
+{
+  list-style-type: none;
+  padding: 4px;
+  margin: 0;
+}
+
+.navbox li > a
+{
+  display: block;
+  padding: 4px 4px;
+  margin: 4px 0;
+}
+
+
+div.footer 
+{
+  grid-area: footer;
+  text-align: center;
 }
 
 /* Navigation styles */
+/*
 #navbar
 {
   display: grid;
@@ -39,12 +81,7 @@
   text-align: center;
   padding: 2px 0;
 }
-
-#webring
-{
-  display: block;
-  text-align: center;
-}
+*/
 
 #webring > a 
 {

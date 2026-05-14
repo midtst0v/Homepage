@@ -1,68 +1,75 @@
+* 
+{
+  /* outline: solid 1px red; */
+}
+
 body 
 {
   color: white;
   background-color: black;
-  /* background-color: cornflowerblue; */
-  font-family: Verdana, sans-serif;
-  font-size: 10pt;
+
+  font-family: 'Comic Sans MS', 'Comic Sans', Verdana, Arial, Helvetica, sans-serif;
 }
 
-#logo 
+article 
 {
-  background-image: linear-gradient(black, gray);
-  border: 1px inset;
-  border-color: black gray white lightgray;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 4px;
 }
 
-#banner 
-{
-  background-image: linear-gradient(darkgray, gray);
-  border: 1px outset;
-  border-color: white gray black lightgray;
-}
-
-#pageTitle > p
+.pageTitle
 {
   color: whitesmoke;
   text-shadow: gray 2px 2px;
-  margin: auto 4px;
 
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 24pt;
 }
 
-/* Navigation styles */
-#navbar
+.content, .navarea, .footer 
 {
-  background-color: whitesmoke;
-  border: 1px inset;
-  border-color: black gray white lightgray;
+  border: inset 1px gray;
+}
+
+/* Navigation styles */
+
+.navbox a
+{
+  color: black;
+  background-color: orange;
+  
+  background-image: url('../assets/img/btn_hi.png'),
+                    url('../assets/img/btn_blend.png');
+
+  background-position: top, right;
+  background-size: contain, 60%;
+  background-repeat: repeat-x, repeat-y;
+
+  border: outset 1px gray;
+  font-weight: bold;
+}
+
+.navbox a:hover
+{
+  border-style: inset;
+  background-image: url('../assets/img/btn_shadow.png'),
+                    url('../assets/img/btn_hi.png'),
+                    url('../assets/img/btn_blend.png');
+
+  background-position: 0, right, right;
+  background-size: 100% 100%, 100% 100%, 60%;
+  background-repeat: no-repeat, repeat-x, no-repeat;
 }
 
 /* Link styles */
 a
 {
-  color: blue;
+  color: yellowgreen;
   text-decoration: none;
 }
 
-a:hover
+a:hover:only-of-type(a)
 {
-  color: maroon;
-  text-decoration: underline;
+  color: white;
   border-color: inherit;
-}
-
-#navbar li > a,
-#navbar li > a:visited
-{
-  color: black;
-  border-right: 1px dotted;
-  border-color: gray;
-}
-
-#navbar li > a:hover
-{
-  color: palegoldenrod;
-  background-color: navy;
 }
