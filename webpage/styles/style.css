@@ -13,16 +13,31 @@ article
   padding: 4px;
 }
 
+.header
+{
+  background-color: orange;
+
+  background-image: url('../assets/img/btn_hi.png'),
+                    url('../assets/img/btn_blend.png');
+
+  background-position: top, right;
+  background-size: contain, 25%;
+  background-repeat: repeat-x, repeat-y;
+}
+
+.header, .header .pageTitle
+{
+  color: black;
+}
+
 .pageTitle
 {
-  color: whitesmoke;
-  text-shadow: gray 2px 2px;
-
+  color: white;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 24pt;
 }
 
-.content, .nav, .footer 
+.header, .content, .nav, .footer 
 {
   border: inset 1px gray;
 }
