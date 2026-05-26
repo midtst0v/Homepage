@@ -69,3 +69,13 @@ a:hover:only-of-type(a)
   color: white;
   border-color: inherit;
 }
+
+#webring > a 
+{
+  border: 1px dotted black;
+}
+
+#webring > a:hover 
+{
+  border-color: white;
+}
