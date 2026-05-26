@@ -1,18 +1,14 @@
-@media screen and (width >= 1024px) {
-  body 
-  {
-    width: 1024px;
-    margin: auto;
-  }
-}
-
 body 
 {
+  width: auto;
+  max-width: 1024px;
+  margin: auto;
+  
   display: grid;
   grid-template-areas: 
-    "header header"
-    "navarea content"
-    "footer footer";
+  "header header"
+  "navarea content"
+  "footer footer";
   grid-template-columns: 1fr 4fr;
 }
 
@@ -57,31 +53,11 @@ body
 }
 
 
-div.footer 
+.footer 
 {
   grid-area: footer;
   text-align: center;
 }
-
-/* Navigation styles */
-/*
-#navbar
-{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 0;
-  margin: 2px;
-  list-style-type: none;
-}
-
-#navbar li > a,
-#navbar li > a:visited
-{
-  display: block;
-  text-align: center;
-  padding: 2px 0;
-}
-*/
 
 #webring > a 
 {
