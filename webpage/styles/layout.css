@@ -9,7 +9,7 @@ body
   "header header"
   "navarea content"
   "footer footer";
-  grid-template-columns: 192px;
+  grid-template-columns: 200px;
 }
 
 .header, .navarea, .content, .footer
@@ -59,9 +59,15 @@ body
   text-align: center;
 }
 
+#webring 
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
 #webring > a 
 {
-  padding: 0;
-  margin: 2px;
-  display: inline-block;
+  margin: 1px;
+  display: inherit;
 }
