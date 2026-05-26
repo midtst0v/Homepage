@@ -7,12 +7,12 @@ body
   display: grid;
   grid-template-areas: 
   "header header"
-  "navarea content"
+  "nav content"
   "footer footer";
   grid-template-columns: 200px;
 }
 
-.header, .navarea, .content, .footer
+.header, .nav, .content, .footer
 {
   padding: 3px;
   margin: 3px;
@@ -33,9 +33,9 @@ body
   grid-area: content;
 }
 
-.navarea
+.nav
 {
-  grid-area: navarea;
+  grid-area: nav;
 }
 
 .navbox 

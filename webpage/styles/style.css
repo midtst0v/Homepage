@@ -22,7 +22,7 @@ article
   font-size: 24pt;
 }
 
-.content, .navarea, .footer 
+.content, .nav, .footer 
 {
   border: inset 1px gray;
 }
