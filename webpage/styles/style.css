@@ -44,6 +44,13 @@ article
 
 /* Navigation styles */
 
+.nav 
+{
+  background-image: url('../assets/img/btn_shadow.png'), url('../assets/img/bg_grate.png');
+  background-size: 100% 100%, auto;
+  background-repeat: no-repeat, repeat;
+}
+
 .navList a
 {
   color: black;
