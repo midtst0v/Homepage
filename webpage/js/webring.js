@@ -1,9 +1,9 @@
-function populate()
+async function populate()
 {
   const jsonUrl = "https://mdtx.cc/assets/json/webring.json";
   const request = new Request(jsonUrl);
 
-  fetch(request)
+  await fetch(request)
   .then((response) => 
   {
     if(!response.ok)
@@ -11,13 +11,13 @@ function populate()
 
     return response.json();
   })
-  .then((response) => populateWebring(response));
+  .then((info) => populateWebring(info));
 }
 
-function populateWebring(webring)
+function populateWebring(info)
 {
   let ring = document.getElementById("webring");
-  for (let btn of webring.webring)
+  for (let btn of info.webring)
   {
     const link = document.createElement("a");
     const img = document.createElement("img");
