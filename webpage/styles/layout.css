@@ -53,6 +53,11 @@ body
   margin-bottom: 4px;
 }
 
+.blockade 
+{
+  display: block;
+  text-align: center;
+}
 
 .footer 
 {

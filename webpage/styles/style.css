@@ -51,6 +51,21 @@ article
   background-repeat: no-repeat, repeat;
 }
 
+.blockade
+{
+  color: white;
+  display: block; 
+
+  font-size: 10pt; 
+  font-weight: bold;
+  text-align: center;
+  
+  background-image: url('../assets/img/lines_diag.png'),
+                    url('../assets/img/btn_hi.png');
+  background-size: contain, contain;
+  background-color: black;
+}
+
 .navList a
 {
   color: black;
