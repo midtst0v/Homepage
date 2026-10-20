@@ -4,7 +4,12 @@
     {
       "alt" : "mdtx",
       "url" : "https://mdtx.cc",
-      "img" : "assets/img/88x31.png"
+      "img" : "assets/img/88x31.gif"
+    },
+    {
+      "alt" : "goat",
+      "url" : "https://mdtx.cc",
+      "img" : "assets/img/88x31_byagoat.gif"
     },
     {
       "alt" : "Cloudflare Pages",
